@@ -7,8 +7,6 @@
 //         'appRoutes',
 //         'retail'
 //     ]);
-
-
 'use strict';
 
 var retail = angular.module("retail", []);

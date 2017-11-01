@@ -38,6 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'retail',
+
+    # to try if it rectify 'No 'Access-Control-Allow-Origin' error
+    'corsheaders',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,6 +52,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+
+    # to try if it rectify 'No 'Access-Control-Allow-Origin' error
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
 )
 
 ROOT_URLCONF = 'urls'
@@ -71,6 +79,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+
+#  'No 'Access-Control-Allow-Origin'header present
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+'localhost:8081',
+'127.0.0.1:8081',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
