@@ -1,3 +1,14 @@
+// 'use strict';
+//
+// var retail = angular.module("retail", []);
+//
+// angular
+//     .module('SampleApplication', [
+//         'appRoutes',
+//         'retail'
+//     ]);
+
+
 'use strict';
 
 var retail = angular.module("retail", []);
@@ -5,5 +16,6 @@ var retail = angular.module("retail", []);
 angular
     .module('SampleApplication', [
         'appRoutes',
-        'retail'
+        'retail',
+        'ngResource'
     ]);
